@@ -9,6 +9,6 @@ class SlackTest extends TestCase
 
     public function test_can_slack(): void
     {
-        $this->assertNotNull(config('services.slack.secret'));
+        $this->assertNotEmpty(config('services.slack.secret'));
     }
 }
