@@ -14,11 +14,8 @@ jobs:
     name: Build & Test Laravel CLI App
     runs-on: ubuntu-latest
     environment:
-      name: ${{ 
-        github.ref_name == 'main' && 'prod' || 
-        github.ref_name == 'stg' && 'stg' || 
-        'dev' 
-      }}
+      name: ${{ github.ref_name == 'main' && 'prod' || github.ref_name == 'stg' && 'stg' || 'dev' }}
+
       
     steps:
       - name: Checkout repository
@@ -52,11 +49,8 @@ jobs:
     runs-on: ubuntu-latest
     needs: build-and-test
     environment:
-      name: ${{ 
-        github.ref_name == 'main' && 'prod' || 
-        github.ref_name == 'stg' && 'stg' || 
-        'dev' 
-      }}
+      name: ${{ github.ref_name == 'main' && 'prod' || github.ref_name == 'stg' && 'stg' || 'dev' }}
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
