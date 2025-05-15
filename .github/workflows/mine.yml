@@ -14,10 +14,6 @@ jobs:
     name: Build & Test Slack-Me App
     runs-on: ubuntu-latest
 
-    defaults:
-      run:
-        working-directory: Slack-Me
-
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
