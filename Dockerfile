@@ -7,8 +7,9 @@ COPY . .
 # --- Stage 2: Development/test build with dev dependencies ---
 FROM base AS test
 
-RUN composer install
-RUN php artisan key:generate
+RUN composer install --no-interaction --prefer-dist
+RUN cp .env.example .env && \
+    php artisan key:generate
 
 # --- Stage 3: Production build with no dev dependencies ---
 FROM base AS release
