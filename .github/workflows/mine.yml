@@ -25,11 +25,12 @@ jobs:
 
       - name: Copy environment file
         run: cp .env.example .env
-        
+
       - name: Run Laravel unit tests in container
         run: |
           docker run --rm \
             -e SLACK_SECRET="${{ secrets.SLACK_SECRET }}" \
+            -e APP_KEY=base64:9Nf0Wz0JgBKlA8x1Dqz0cF5VdTq+FxktA7VVuZ5n6twg= \            
             slack-test php artisan test --testdox
 
       - name: Setup PHP
