@@ -8,7 +8,7 @@ COPY . .
 FROM base AS test
 
 RUN composer install
-
+RUN php artisan key:generate
 
 # --- Stage 3: Production build with no dev dependencies ---
 FROM base AS release
