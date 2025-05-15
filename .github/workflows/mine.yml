@@ -13,7 +13,24 @@ jobs:
   build-and-test:
     name: Build & Test Slack-Me App
     runs-on: ubuntu-latest
+    environment:
+      name: ${{ github.ref_name == 'main' && 'prod' || github.ref_name == 'stg' && 'stg' || 'dev' }}
 
+    # steps:
+    #   - name: Checkout repository
+    #     uses: actions/checkout@v4
+
+    #   - name: Build test image (includes dev dependencies)
+    #     run: docker build --file Dockerfile --target test -t slack-test .
+
+    #   - name: Copy environment file
+    #     run: cp .env.example .env
+
+    #   - name: Run Laravel unit tests in container
+    #     run: |
+    #       docker run --rm \
+    #         -e SLACK_SECRET="${{ secrets.SLACK_SECRET }}" \
+    #         slack-test php artisan test --testdox
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
