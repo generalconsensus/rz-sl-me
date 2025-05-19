@@ -58,12 +58,14 @@ jobs:
         run: docker build --file Dockerfile --target test -t slack-test .
 
       - name: Run Laravel unit tests in container
+        env:
+          SLACK_SECRET: ${{ secrets.SLACK_SECRET }}
+          APP_KEY: ${{ secrets.APP_KEY }}
         run: |
           docker run --rm \
-            -e SLACK_SECRET="${{ secrets.SLACK_SECRET }}" \
-            -e APP_KEY="${{ secrets.APP_KEY }}" \
+            -e SLACK_SECRET="$SLACK_SECRET" \
+            -e APP_KEY="$APP_KEY" \
             slack-test php artisan test --testdox
-
   # -----------------------------------------------------------------------------
   # JOB 2: Build the final production image (no dev deps) & push to DockerHub
   # -----------------------------------------------------------------------------
