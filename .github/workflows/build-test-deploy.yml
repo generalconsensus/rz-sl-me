@@ -83,9 +83,8 @@ jobs:
     name: Build & Push Docker Image
     needs: build-and-test
     runs-on: ubuntu-latest
-
     # Only run this job if a Git tag triggered the workflow
-    if: github.event_name == 'workflow_call'
+    if: github.event_name == 'workflow_call' && inputs.tag != ''
 
     # This deploys to the production environment
     environment:
