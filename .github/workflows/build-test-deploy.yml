@@ -49,7 +49,7 @@ on:
       DOCKER_PASSWORD:
         required: true             
 env:
-  IMAGE_NAME: generalconsensus/rz-sl-me
+  IMAGE_NAME: generalconsensusog/rz-sl-me
 
 jobs:
   # -----------------------------------------------------------------------------
