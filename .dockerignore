@@ -7,7 +7,6 @@ npm-debug.log
 .env.*          # Don't bring in .env.dev, .env.test, etc.
 tests/
 phpunit.xml
-phpunit.xml.dist
 
 # Composer junk (just in case)
 composer.lock
