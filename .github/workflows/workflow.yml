@@ -20,16 +20,19 @@
 name: Dan McDermott CICD Pipeline
 
 on:
+on:
   workflow_dispatch:
-    variables:
-      env:
-        type: environment
+    inputs:
+      environment:
+        description: 'Select the environment to deploy to'
+        required: true
         default: dev
+        type: choice
         options:
           - prod
           - stg
           - dev
-  push:
+
     tags:
       - 'v*' 
 
