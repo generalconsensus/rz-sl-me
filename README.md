@@ -65,3 +65,6 @@ When a push to `main` occurs, the `tag.yml` workflow automatically bumps the ver
 To deploy manually:
 - Run the `Create new tag` workflow manually under the **Actions** tab, selecting the appropriate environment (e.g., `prod`).
 
+To run the image locally:
+- `docker login`
+- `docker run -e SLACK_SECRET="test"  -it generalconsensusog/rz-sl-me:v0.0.11`
