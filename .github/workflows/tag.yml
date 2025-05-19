@@ -15,7 +15,7 @@ jobs:
           default_bump: patch
 
   deploy:
-    needs: bump
+    needs: build
     uses: ./.github/workflows/build-test-deploy.yml
     with:
       environment: prod
