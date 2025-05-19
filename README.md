@@ -32,3 +32,4 @@ Please do not include any dev dependencies in the final build
 To do this you must run composer install again with these parameters
 
 `composer install --no-dev --optimize-autoloader`
+
