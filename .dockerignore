@@ -1,0 +1,42 @@
+# Node/npm junk (not used here but safe default)
+node_modules
+npm-debug.log
+
+# Laravel dev/test artifacts
+.env
+.env.*          # Don't bring in .env.dev, .env.test, etc.
+tests/
+phpunit.xml
+phpunit.xml.dist
+
+# Composer junk (just in case)
+composer.lock
+composer.phar
+
+# Git and GitHub metadata
+.git
+.gitignore
+.gitattributes
+.github/
+
+# Docker junk
+.dockerignore
+Dockerfile
+docker-compose.yml
+
+# IDE/editor junk
+.vscode/
+.idea/
+*.swp
+*.swo
+*.bak
+
+# OS metadata
+.DS_Store
+Thumbs.db
+
+# Logs/cache
+storage/logs
+storage/framework/sessions
+storage/framework/views
+storage/framework/cache
