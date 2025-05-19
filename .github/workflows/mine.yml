@@ -36,7 +36,7 @@ on:
       - 'v*' 
 
 env:
-  IMAGE_NAME: rickshawhobo/rz-sl-me
+  IMAGE_NAME: generalconsensus/rz-sl-me
 
 jobs:
   # -----------------------------------------------------------------------------
