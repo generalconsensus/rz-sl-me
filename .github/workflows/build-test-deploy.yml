@@ -36,7 +36,7 @@ on:
       environment:
         required: true
         type: string
-         secrets:
+    secrets:
       SLACK_SECRET:
         required: true
       APP_KEY:
