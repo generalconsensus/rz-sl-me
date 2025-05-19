@@ -20,7 +20,6 @@
 name: Dan McDermott CICD Pipeline
 
 on:
-on:
   workflow_dispatch:
     inputs:
       environment:
