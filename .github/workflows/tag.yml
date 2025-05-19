@@ -19,3 +19,8 @@ jobs:
     uses: ./.github/workflows/build-test-deploy.yml
     with:
       environment: prod
+    secrets:
+      SLACK_SECRET: ${{ secrets.SLACK_SECRET }}
+      APP_KEY: ${{ secrets.APP_KEY }}
+      DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
+      DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}      

@@ -36,7 +36,15 @@ on:
       environment:
         required: true
         type: string
-                  
+         secrets:
+      SLACK_SECRET:
+        required: true
+      APP_KEY:
+        required: true
+      DOCKER_USERNAME:
+        required: true
+      DOCKER_PASSWORD:
+        required: true             
 env:
   IMAGE_NAME: generalconsensus/rz-sl-me
 
