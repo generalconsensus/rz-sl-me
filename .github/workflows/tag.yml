@@ -13,3 +13,9 @@ jobs:
         with: 
           github_token: ${{github.token}}
           default_bump: patch
+
+  deploy:
+    needs: bump
+    uses: ./.github/workflows/build-and-test.yml
+    with:
+      environment: prod

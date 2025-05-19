@@ -31,10 +31,7 @@ on:
           - prod
           - stg
           - dev
-  push:
-    tags:
-      - 'v*'  # <-- Moved `tags:` under `push:` to be valid
-
+          
 env:
   IMAGE_NAME: generalconsensus/rz-sl-me
 
