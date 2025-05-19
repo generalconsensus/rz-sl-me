@@ -49,7 +49,7 @@ RUN composer install --no-dev --optimize-autoloader \
 # Based on official PHP 8.2 CLI image
 # Contains only the optimized, production-ready app
 # -----------------------------------------------------------------------------
-FROM php:8.2-cli
+FROM php:8.2-cli as final
 
 WORKDIR /app
 
