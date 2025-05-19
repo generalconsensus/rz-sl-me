@@ -16,6 +16,6 @@ jobs:
 
   deploy:
     needs: bump
-    uses: ./.github/workflows/build-and-test.yml
+    uses: ./.github/workflows/build-test-deploy.yml
     with:
       environment: prod

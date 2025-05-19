@@ -31,7 +31,12 @@ on:
           - prod
           - stg
           - dev
-          
+  workflow_call:
+    inputs:
+      environment:
+        required: true
+        type: string
+                  
 env:
   IMAGE_NAME: generalconsensus/rz-sl-me
 
