@@ -31,7 +31,6 @@ on:
           - prod
           - stg
           - dev
-
   push:
     tags:
       - 'v*'  # <-- Moved `tags:` under `push:` to be valid
