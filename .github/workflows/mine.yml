@@ -45,6 +45,7 @@ jobs:
   build-and-test:
     name: Build & Test Slack-Me App
     runs-on: ubuntu-latest
+    environment: ${{ inputs.environment }}
 
     # Since only tag pushes are allowed, always use the 'prod' environment
     environment:
