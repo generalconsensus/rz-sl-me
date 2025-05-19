@@ -5,8 +5,6 @@ npm-debug.log
 # Laravel dev/test artifacts
 .env
 .env.*          # Don't bring in .env.dev, .env.test, etc.
-tests/
-phpunit.xml
 
 # Composer junk (just in case)
 composer.lock
