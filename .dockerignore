@@ -32,7 +32,7 @@ docker-compose.yml
 Thumbs.db
 
 # Logs/cache
-storage/logs
-storage/framework/sessions
-storage/framework/views
-storage/framework/cache
+# storage/logs
+# storage/framework/sessions
+# storage/framework/views
+# storage/framework/cache
