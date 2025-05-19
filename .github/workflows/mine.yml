@@ -32,8 +32,9 @@ on:
           - stg
           - dev
 
+  push:
     tags:
-      - 'v*' 
+      - 'v*'  # <-- Moved `tags:` under `push:` to be valid
 
 env:
   IMAGE_NAME: generalconsensus/rz-sl-me
@@ -45,11 +46,7 @@ jobs:
   build-and-test:
     name: Build & Test Slack-Me App
     runs-on: ubuntu-latest
-    environment: ${{ inputs.environment }}
-
-    # Since only tag pushes are allowed, always use the 'prod' environment
-    environment:
-      name: "${{ inputs.env }}"
+    environment: ${{ inputs.environment }}  # Will work for `workflow_dispatch` only
 
     steps:
       - name: Checkout repository
